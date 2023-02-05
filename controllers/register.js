@@ -25,7 +25,6 @@ const register = async (req, res) => {
       });
       return user[0];
     });
-
     res.json(loginData);
   } catch (err) {
     res.status(400).json(`Unable to register: ${err}`);
