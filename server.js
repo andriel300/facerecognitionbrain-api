@@ -21,7 +21,7 @@ app.use(cors());
 // These lines add middleware to the Express.js application to handle URL encoded data, JSON data, and CORS.
 
 app.get("/", (req, res) => {
-  res.send("success");
+  res.send("hey this is my API Running 😘");
 });
 
 app.post("/signin", (req, res) => {
@@ -51,3 +51,5 @@ server.listen(port);
 server.on("listening", () => {
   console.log(`Listening on ${port}`);
 });
+
+module.exports = app;
