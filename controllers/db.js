@@ -1,14 +1,17 @@
 const knex = require("knex");
 const bcrypt = require("bcrypt");
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 const db = knex({
   client: "pg",
   connection: {
-    host: "127.0.0.1",
+    host: process.env.DB_HOST,
     port: 5432,
-    user: "andriel",
-    password: "5899",
-    database: "smart_brain",
+    user: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
   },
 });
 
